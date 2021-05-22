@@ -1,0 +1,22 @@
+.breadcrumb {
+    padding: 10px 0;
+    background-color: #f5f5f5;
+}
+
+.breadcrumb__link {
+    display: flex;
+    color: #252a2b;
+    font-size: 13px;
+    padding: 5px 15px;
+}
+
+.breadcrumb__link li:not(:last-child):after {
+    content: '/';
+    margin-left: 3px;
+    margin-right: 5px;
+    color: #ccc;
+}
+
+.breadcrumb__link span {
+    color: #777;
+}
