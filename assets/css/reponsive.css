@@ -11,6 +11,10 @@
     .header__mobile {
         padding: 0 8px;
     }
+
+    .product__description {
+        margin-top: 30px;
+    }
 }
 
 /* Mobile & Tablet */
@@ -44,6 +48,29 @@
 
     .header.header__scroll .header__mobile {
         display: none;
+    }
+
+    .product__image-detail {
+        width: 100%;
+    }
+    
+    .product__image-button .product__zoom-in {
+        bottom: 15px;
+        right: 15px;
+        left: initial;
+    }
+
+    .product__description {
+        margin-top: 60px;
+        position: unset;
+    }
+    
+    .collection__heading {
+        margin: 20px 0;
+    }
+
+    .collection__product {
+        margin-bottom: 10px;
     }
 }
 
@@ -92,7 +119,7 @@
 
     .newsletter__title {
         top: 0;
-        margin: 10px 0;
+        margin-bottom: 15px;
     }
 
     .newsletter__form {
@@ -116,5 +143,77 @@
     .site__nav-close {
         top: 35px;
         right: 30px;
+    }
+
+    .product__image-slider {
+        overflow: visible;
+        max-height: 450px;
+    }
+    
+    .product__image-slider-item img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .collection__heading-title h2 {
+        font-size: 20px;
+        text-align: center;
+        margin-bottom: 5px
+    }
+
+    .collection__heading-sort {
+        float: none;
+        width: 100%;
+    }
+
+    .collection__product {
+        height: auto;
+    }
+    
+    .product__image-slider .flickity-button {
+        display: none;
+    }
+    
+    .collection__product-details {
+        padding: 5px 0;
+    }
+
+    .footer__main {
+        margin: 20px 0;
+    }
+    
+    .footer__main .footer__col {
+        border-bottom: 1px solid #efefef;
+        margin-bottom: 0;
+    }
+
+    .footer__main .footer__title h3 {
+        position: relative;
+        font-size: 14px;
+        padding: 10px 0;
+        margin: 0;
+        text-transform: uppercase;
+        line-height: 20px;
+    }
+    
+    .footer__main .footer__title.active h3::after {
+        content: "\f106";
+    }
+
+    .footer__main .footer__title h3::after {
+        content: "\f107";
+        font-family: "Font Awesome 5 Free"; 
+        font-weight: 600;
+        font-size: 14px;
+        position: absolute;
+        top: 0px;
+        right: 5px;
+        text-align: center;
+        line-height: 36px;
+    }
+
+    .footer__content {
+        display: none;
     }
 }

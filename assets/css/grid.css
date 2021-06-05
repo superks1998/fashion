@@ -5,7 +5,7 @@
 }
 
 .grid.wide {
-    max-width: 100%;
+    width: 1500px;
     margin: 0 auto;
 }
 
@@ -288,7 +288,7 @@
 }
 
 /* PC medium resolution > */
-@media (min-width: 1113px) {
+@media (min-width: 1024px) {
     .row {
         margin-left: -15px;
         margin-right: -15px;

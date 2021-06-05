@@ -9,10 +9,9 @@ const siteNavSearch = document.querySelector('.site__nav-search');
 const siteNavCart = document.querySelector('.site__nav-cart');
 const siteNavMenu = document.querySelector('.site__nav-menu');
 const siteOverlay = document.querySelector('.site__overlay');
-const siteClose = document.querySelector('.site__nav-close');
+const siteClose = document.querySelector('.site__nav-close.btn__close');
 const iconSubnavLevel0 = document.querySelector('.menu__item > .icon__subnav');
 const listIconSubnavLevel1 = document.querySelectorAll('.submenu2__level1 .icon__subnav');
-const menuSubnavItemLevel0 = document.querySelector('.menu__item.has__sub');
 
 setTimeout(function() {
     scrollTop();
@@ -28,6 +27,31 @@ function scrollTop() {
         }
     }
 };
+
+
+function plusQuantity() {
+    if ( jQuery('input[name="quantity"]').val() != undefined ) {
+		var currentVal = parseInt(jQuery('input[name="quantity"]').val());
+		if (!isNaN(currentVal)) {
+			jQuery('input[name="quantity"]').val(currentVal + 1);
+		} else {
+			jQuery('input[name="quantity"]').val(1);
+		};
+	}else {
+		console.log('error: Not see elemnt ' + jQuery('input[name="quantity"]').val());
+	}
+}
+
+function minusQuantity() {
+	if ( jQuery('input[name="quantity"]').val() != undefined ) {
+		var currentVal = parseInt(jQuery('input[name="quantity"]').val());
+		if (!isNaN(currentVal) && currentVal > 1) {
+			jQuery('input[name="quantity"]').val(currentVal - 1);
+		};
+	}else {
+		console.log('error: Not see elemnt ' + jQuery('input[name="quantity"]').val());
+	}
+}
 
 iconSearch.onclick = function() {
     app.classList.add('sidebar__move');
@@ -50,26 +74,60 @@ iconMenu.addEventListener('click', function() {
     siteOverlay.classList.add('active');
 });
 
-iconSubnavLevel0.onclick = function() {
-    menuSubnavItemLevel0.classList.toggle('active');
-    const subMenuDad = document.querySelector('.submenu2.subnav__dad');
-    
-    setTimeout(function() {
-        if (subMenuDad.style.display === 'none') {
-            subMenuDad.style.height = '0';
-        } else {
-            subMenuDad.style.height = 'auto';
-        }
-    }, 1000);
-};
 
-listIconSubnavLevel1.forEach(item => {
-    item.addEventListener('click', function() {
-        const subMenuLevel1 = this.closest('.submenu2__level1');
-        subMenuLevel1.classList.toggle('active');
-        
+$(document).ready(function() {
+    // changeImageDetail('thumb-one');
+
+    // MenuMain Sidebar
+    $(document).on('click', 'span.icon__subnav', function(){
+        if ($(this).parent().hasClass('active')) {
+            $(this).parent().removeClass('active');
+            // SlideUp() form display: block(height: auto) to display: none(height: 0)
+            $(this).siblings('ul').slideUp();
+        } else {
+            if( $(this).parent().hasClass("level0") || $(this).parent().hasClass("subnav__level1")){
+                $(this).parent().siblings().find("ul").slideUp();
+                $(this).parent().siblings().removeClass("active");
+            }
+            $(this).parent().addClass('active');
+            // SlideUp() form display: none(height: 0) to display: block(height: auto)
+            $(this).siblings('ul').slideDown();
+        }
+    });
+
+    // Fotter Mobile
+    $(document).on('click', '.footer__main .footer__title', function() {
+        if ($(window).width() < 740) {
+            if ($(this).hasClass('active')) {
+                $(this).removeClass('active');
+                $(this).siblings('.footer__content').slideUp();
+            } else {
+                $(this).addClass('active');
+                $(this).siblings('.footer__content').slideDown();
+            }
+        }
     })
-});
+
+    // Swatch size product
+    $(document).on('click', '.swatch__element label', function() {
+        if ($(this).hasClass('')) {
+            $('.swatch__element label.sd').removeClass('sd');
+            
+            $(this).addClass('sd');
+            // $('#pro__code').text('SKU: SP000474');
+
+            if($(this).siblings().val() == 'S') {
+                $('#pro__code').text('SKU: SP000469');
+            } else if ($(this).siblings().val() == 'M') {
+                $('#pro__code').text('SKU: SP000479');
+            } else if ($(this).siblings().val() == 'L') {
+                $('#pro__code').text('SKU: SP000489');
+            } else {
+                $('#pro__code').text('SKU: SP000499');
+            }
+        };
+    })
+})
 
 siteOverlay.onclick = function() {
     app.classList.remove('sidebar__move');
@@ -90,36 +148,4 @@ siteClose.onclick = function() {
 };
 
 
-
-
-
-
-// iconCart.onmouseenter = function() {
-//     iconCart.style.animation = 'scrollIn 0.4s';
-// }
-
-// iconCart.onmouseleave = function() {
-//     iconCart.style.animation = 'scrollOut 0.4s';
-// }
-
-
-
-$('.owl-carousel').owlCarousel({
-    loop: true,
-    // nav: true,
-    dots: true,
-    // autoplay: true,
-    autoplayHoverPause: true,
-    responsive: {
-        0:{
-            items:1
-        },
-        600:{
-            items:1
-        },
-        1000:{
-            items:1
-        }
-    }
-});
 
