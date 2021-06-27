@@ -8,14 +8,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
-    <link rel="stylesheet" href="/owlcarousel/assets/owl.carousel.min.css">
-    <link rel="stylesheet" href="/owlcarousel/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="./owlcarousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="./owlcarousel/assets/owl.theme.default.min.css">
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
-    <link rel="stylesheet" href="assets/css/grid.css">
-    <link rel="stylesheet" href="assets/css/base.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="/assets/css/product__details.css">
-    <link rel="stylesheet" href="assets/css/reponsive.css">
+    <link rel="stylesheet" href="./assets/css/grid.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/product__details.css">
+    <link rel="stylesheet" href="./assets/css/reponsive.css">
     <title>Fashion</title>
 </head>
 <body class="product">
@@ -842,62 +842,6 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-    <script src="/app.js"></script>
-    <script>
-        var  ncurrent;
-
-        $(document).ready(function() {
-            changeImageDetail('thumb-one');
-            ncurrent = ncurrent - 1;
-        });
-
-        function changeImageDetail(id = 'thumb-one') {
-            const imageThumb =  document.getElementById(id);
-            const imagePath = imageThumb.getAttribute('src');
-            ncurrent = parseInt($('.product__gallery-thumb').index('.active') + 1);
-
-            document.getElementById('img-detail').setAttribute('src', imagePath);
-
-            document.querySelector('.product__gallery-thumb.active').classList.remove('active');
-
-            imageThumb.closest('.product__gallery-thumb').classList.add('active');
-
-        };
-
-
-
-        $(document).on('click', '.product__zoom-in', function() {
-            $('body').addClass('open__layer');
-            $('.divzoom').css({'opacity': 0, 'visibility': 'hidden'}).show();
-
-            if ( $(window).width() < 1024) {
-                ncurrent = parseInt($(".product__image-slider-item.is-selected").index());
-            };
-
-            $('.divzoom__main').flickity({
-                resize: true,
-                draggable: true,
-            })
-                .flickity( 'select', ncurrent );
-
-            setTimeout(function() {
-                $('.divzoom').css({'opacity': 1, 'visibility': 'visible'})
-            }, 50);
-        });
-
-        $(document).on('click','.divzoom__close', function(event) {
-            $(".divzoom").hide();
-            $("body").removeClass("open__layer");
-            $('.divzoom__main').flickity('select', 0);
-            //$('.divzoom_main').slick('unslick');
-        });
-
-        $('.image__main').flickity({
-                resize: true,
-                draggable: true,
-                contain: true,
-        });
-
-    </script>
+    <script src="./app.js"></script>
 </body>
 </html>

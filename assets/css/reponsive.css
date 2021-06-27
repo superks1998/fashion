@@ -6,8 +6,7 @@
 }
 
 /* > PC low resolution */
-@media (min-width: 1024px) and (max-width: 1239px) { 
-
+@media (min-width: 1024px) and (max-width: 1239px) {
     .header__mobile {
         padding: 0 8px;
     }
@@ -22,7 +21,7 @@
     .hide-on-tablet-mobile {
         display: none;
     }
-    
+
     .header.header__scroll .header__mid {
         position: relative;
         top: 0;
@@ -53,7 +52,7 @@
     .product__image-detail {
         width: 100%;
     }
-    
+
     .product__image-button .product__zoom-in {
         bottom: 15px;
         right: 15px;
@@ -64,13 +63,25 @@
         margin-top: 60px;
         position: unset;
     }
-    
+
     .collection__heading {
         margin: 20px 0;
     }
 
     .collection__product {
         margin-bottom: 10px;
+    }
+
+    .login__title {
+        border: none;
+    }
+
+    .login__title::after {
+        margin-top: 30px;
+    }
+
+    .login__title h1 {
+        font-size: 40px;
     }
 }
 
@@ -88,8 +99,6 @@
         padding: 0 8px;
     }
 }
-
-
 
 /* Mobile */
 @media (max-width: 739px) {
@@ -139,7 +148,7 @@
     .site__nav-container {
         padding: 40px 30px 0;
     }
-    
+
     .site__nav-close {
         top: 35px;
         right: 30px;
@@ -149,7 +158,7 @@
         overflow: visible;
         max-height: 450px;
     }
-    
+
     .product__image-slider-item img {
         height: 100%;
         width: 100%;
@@ -159,7 +168,7 @@
     .collection__heading-title h2 {
         font-size: 20px;
         text-align: center;
-        margin-bottom: 5px
+        margin-bottom: 5px;
     }
 
     .collection__heading-sort {
@@ -170,11 +179,11 @@
     .collection__product {
         height: auto;
     }
-    
+
     .product__image-slider .flickity-button {
         display: none;
     }
-    
+
     .collection__product-details {
         padding: 5px 0;
     }
@@ -182,7 +191,7 @@
     .footer__main {
         margin: 20px 0;
     }
-    
+
     .footer__main .footer__col {
         border-bottom: 1px solid #efefef;
         margin-bottom: 0;
@@ -196,14 +205,14 @@
         text-transform: uppercase;
         line-height: 20px;
     }
-    
+
     .footer__main .footer__title.active h3::after {
         content: "\f106";
     }
 
     .footer__main .footer__title h3::after {
         content: "\f107";
-        font-family: "Font Awesome 5 Free"; 
+        font-family: "Font Awesome 5 Free";
         font-weight: 600;
         font-size: 14px;
         position: absolute;

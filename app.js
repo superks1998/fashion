@@ -1,151 +1,213 @@
-const app = document.querySelector('.app');
-const header = document.querySelector('.header');
-const topBar = document.querySelector('.topbar');
-const iconSearch = document.querySelector('.icon__search');
-const iconCart = document.querySelector('.icon__cart');
-const iconMenu = document.querySelector('.header__action-menu');
-const siteNav = document.querySelector('.site__nav');
-const siteNavSearch = document.querySelector('.site__nav-search');
-const siteNavCart = document.querySelector('.site__nav-cart');
-const siteNavMenu = document.querySelector('.site__nav-menu');
-const siteOverlay = document.querySelector('.site__overlay');
-const siteClose = document.querySelector('.site__nav-close.btn__close');
-const iconSubnavLevel0 = document.querySelector('.menu__item > .icon__subnav');
-const listIconSubnavLevel1 = document.querySelectorAll('.submenu2__level1 .icon__subnav');
+const app = document.querySelector(".app");
+const header = document.querySelector(".header");
+const topBar = document.querySelector(".topbar");
+const iconSearch = document.querySelector(".icon__search");
+const iconCart = document.querySelector(".icon__cart");
+const iconMenu = document.querySelector(".header__action-menu");
+const siteNav = document.querySelector(".site__nav");
+const siteNavSearch = document.querySelector(".site__nav-search");
+const siteNavCart = document.querySelector(".site__nav-cart");
+const siteNavMenu = document.querySelector(".site__nav-menu");
+const siteOverlay = document.querySelector(".site__overlay");
+const siteClose = document.querySelector(".site__nav-close.btn__close");
+const iconSubnavLevel0 = document.querySelector(".menu__item > .icon__subnav");
+const listIconSubnavLevel1 = document.querySelectorAll(
+    ".submenu2__level1 .icon__subnav"
+);
 
-setTimeout(function() {
+setTimeout(function () {
     scrollTop();
 }, 100);
 
 function scrollTop() {
-    document.onscroll = function() {
+    document.onscroll = function () {
         const heightHeaderScroll = header.offsetHeight + topBar.offsetHeight;
-        if(document.documentElement.scrollTop > heightHeaderScroll) {
-            header.classList.add('header__scroll');
+        if (document.documentElement.scrollTop > heightHeaderScroll) {
+            header.classList.add("header__scroll");
         } else {
-            header.classList.remove('header__scroll');
+            header.classList.remove("header__scroll");
         }
-    }
-};
-
+    };
+}
 
 function plusQuantity() {
-    if ( jQuery('input[name="quantity"]').val() != undefined ) {
-		var currentVal = parseInt(jQuery('input[name="quantity"]').val());
-		if (!isNaN(currentVal)) {
-			jQuery('input[name="quantity"]').val(currentVal + 1);
-		} else {
-			jQuery('input[name="quantity"]').val(1);
-		};
-	}else {
-		console.log('error: Not see elemnt ' + jQuery('input[name="quantity"]').val());
-	}
+    if (jQuery('input[name="quantity"]').val() != undefined) {
+        var currentVal = parseInt(jQuery('input[name="quantity"]').val());
+        if (!isNaN(currentVal)) {
+            jQuery('input[name="quantity"]').val(currentVal + 1);
+        } else {
+            jQuery('input[name="quantity"]').val(1);
+        }
+    } else {
+        console.log(
+            "error: Not see elemnt " + jQuery('input[name="quantity"]').val()
+        );
+    }
 }
 
 function minusQuantity() {
-	if ( jQuery('input[name="quantity"]').val() != undefined ) {
-		var currentVal = parseInt(jQuery('input[name="quantity"]').val());
-		if (!isNaN(currentVal) && currentVal > 1) {
-			jQuery('input[name="quantity"]').val(currentVal - 1);
-		};
-	}else {
-		console.log('error: Not see elemnt ' + jQuery('input[name="quantity"]').val());
-	}
+    if (jQuery('input[name="quantity"]').val() != undefined) {
+        var currentVal = parseInt(jQuery('input[name="quantity"]').val());
+        if (!isNaN(currentVal) && currentVal > 1) {
+            jQuery('input[name="quantity"]').val(currentVal - 1);
+        }
+    } else {
+        console.log(
+            "error: Not see elemnt " + jQuery('input[name="quantity"]').val()
+        );
+    }
 }
 
-iconSearch.onclick = function() {
-    app.classList.add('sidebar__move');
-    siteNav.classList.add('active');
-    siteNavSearch.classList.add('active');
-    siteOverlay.classList.add('active');
+iconSearch.onclick = function () {
+    app.classList.add("sidebar__move");
+    siteNav.classList.add("active");
+    siteNavSearch.classList.add("active");
+    siteOverlay.classList.add("active");
 };
 
-iconCart.onclick = function() {
-    app.classList.add('sidebar__move');
-    siteNav.classList.add('active');
-    siteNavCart.classList.add('active');
-    siteOverlay.classList.add('active');
+iconCart.onclick = function () {
+    app.classList.add("sidebar__move");
+    siteNav.classList.add("active");
+    siteNavCart.classList.add("active");
+    siteOverlay.classList.add("active");
 };
 
-iconMenu.addEventListener('click', function() {
-    app.classList.add('sidebar__move');
-    siteNav.classList.add('active');
-    siteNavMenu.classList.add('active');
-    siteOverlay.classList.add('active');
+iconMenu.addEventListener("click", function () {
+    app.classList.add("sidebar__move");
+    siteNav.classList.add("active");
+    siteNavMenu.classList.add("active");
+    siteOverlay.classList.add("active");
 });
 
-
-$(document).ready(function() {
+$(document).ready(function () {
     // changeImageDetail('thumb-one');
 
     // MenuMain Sidebar
-    $(document).on('click', 'span.icon__subnav', function(){
-        if ($(this).parent().hasClass('active')) {
-            $(this).parent().removeClass('active');
+    $(document).on("click", "span.icon__subnav", function () {
+        if ($(this).parent().hasClass("active")) {
+            $(this).parent().removeClass("active");
             // SlideUp() form display: block(height: auto) to display: none(height: 0)
-            $(this).siblings('ul').slideUp();
+            $(this).siblings("ul").slideUp();
         } else {
-            if( $(this).parent().hasClass("level0") || $(this).parent().hasClass("subnav__level1")){
+            if (
+                $(this).parent().hasClass("level0") ||
+                $(this).parent().hasClass("subnav__level1")
+            ) {
                 $(this).parent().siblings().find("ul").slideUp();
                 $(this).parent().siblings().removeClass("active");
             }
-            $(this).parent().addClass('active');
+            $(this).parent().addClass("active");
             // SlideUp() form display: none(height: 0) to display: block(height: auto)
-            $(this).siblings('ul').slideDown();
+            $(this).siblings("ul").slideDown();
         }
     });
 
     // Fotter Mobile
-    $(document).on('click', '.footer__main .footer__title', function() {
+    $(document).on("click", ".footer__main .footer__title", function () {
         if ($(window).width() < 740) {
-            if ($(this).hasClass('active')) {
-                $(this).removeClass('active');
-                $(this).siblings('.footer__content').slideUp();
+            if ($(this).hasClass("active")) {
+                $(this).removeClass("active");
+                $(this).siblings(".footer__content").slideUp();
             } else {
-                $(this).addClass('active');
-                $(this).siblings('.footer__content').slideDown();
+                $(this).addClass("active");
+                $(this).siblings(".footer__content").slideDown();
             }
         }
-    })
+    });
 
     // Swatch size product
-    $(document).on('click', '.swatch__element label', function() {
-        if ($(this).hasClass('')) {
-            $('.swatch__element label.sd').removeClass('sd');
-            
-            $(this).addClass('sd');
+    $(document).on("click", ".swatch__element label", function () {
+        if ($(this).hasClass("")) {
+            $(".swatch__element label.sd").removeClass("sd");
+
+            $(this).addClass("sd");
             // $('#pro__code').text('SKU: SP000474');
 
-            if($(this).siblings().val() == 'S') {
-                $('#pro__code').text('SKU: SP000469');
-            } else if ($(this).siblings().val() == 'M') {
-                $('#pro__code').text('SKU: SP000479');
-            } else if ($(this).siblings().val() == 'L') {
-                $('#pro__code').text('SKU: SP000489');
+            if ($(this).siblings().val() == "S") {
+                $("#pro__code").text("SKU: SP000469");
+            } else if ($(this).siblings().val() == "M") {
+                $("#pro__code").text("SKU: SP000479");
+            } else if ($(this).siblings().val() == "L") {
+                $("#pro__code").text("SKU: SP000489");
             } else {
-                $('#pro__code').text('SKU: SP000499');
+                $("#pro__code").text("SKU: SP000499");
             }
-        };
-    })
-})
+        }
+    });
+});
 
-siteOverlay.onclick = function() {
-    app.classList.remove('sidebar__move');
-    siteNav.classList.remove('active');
-    siteNavSearch.classList.remove('active');
-    siteNavCart.classList.remove('active');
-    siteNavMenu.classList.remove('active');
-    siteOverlay.classList.remove('active');
+siteOverlay.onclick = function () {
+    app.classList.remove("sidebar__move");
+    siteNav.classList.remove("active");
+    siteNavSearch.classList.remove("active");
+    siteNavCart.classList.remove("active");
+    siteNavMenu.classList.remove("active");
+    siteOverlay.classList.remove("active");
 };
 
-siteClose.onclick = function() {
-    app.classList.remove('sidebar__move');
-    siteNav.classList.remove('active');
-    siteNavSearch.classList.remove('active');
-    siteNavCart.classList.remove('active');
-    siteNavMenu.classList.remove('active');
-    siteOverlay.classList.remove('active');
+siteClose.onclick = function () {
+    app.classList.remove("sidebar__move");
+    siteNav.classList.remove("active");
+    siteNavSearch.classList.remove("active");
+    siteNavCart.classList.remove("active");
+    siteNavMenu.classList.remove("active");
+    siteOverlay.classList.remove("active");
 };
 
+// Product__Detail
 
+var ncurrent;
 
+$(document).ready(function () {
+    changeImageDetail("thumb-one");
+    ncurrent = ncurrent - 1;
+});
+
+function changeImageDetail(id = "thumb-one") {
+    const imageThumb = document.getElementById(id);
+    const imagePath = imageThumb.getAttribute("src");
+    ncurrent = parseInt($(".product__gallery-thumb").index(".active") + 1);
+
+    document.getElementById("img-detail").setAttribute("src", imagePath);
+
+    document
+        .querySelector(".product__gallery-thumb.active")
+        .classList.remove("active");
+
+    imageThumb.closest(".product__gallery-thumb").classList.add("active");
+}
+
+$(document).on("click", ".product__zoom-in", function () {
+    $("body").addClass("open__layer");
+    $(".divzoom").css({ opacity: 0, visibility: "hidden" }).show();
+
+    if ($(window).width() < 1024) {
+        ncurrent = parseInt(
+            $(".product__image-slider-item.is-selected").index()
+        );
+    }
+
+    $(".divzoom__main")
+        .flickity({
+            resize: true,
+            draggable: true,
+        })
+        .flickity("select", ncurrent);
+
+    setTimeout(function () {
+        $(".divzoom").css({ opacity: 1, visibility: "visible" });
+    }, 50);
+});
+
+$(document).on("click", ".divzoom__close", function (event) {
+    $(".divzoom").hide();
+    $("body").removeClass("open__layer");
+    $(".divzoom__main").flickity("select", 0);
+    //$('.divzoom_main').slick('unslick');
+});
+
+$(".image__main").flickity({
+    resize: true,
+    draggable: true,
+    contain: true,
+});
