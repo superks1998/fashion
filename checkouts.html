@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./assets/css/grid.css">
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/reponsive.css">
+    <title>Fashion</title>
+</head>
+<body>
+    <div class="app">
+        <div class="grid">
+            <div class="container">
+                <div class="checkouts">
+                    <div class="row">
+                        <div class="col l-7 m-12 c-12">
+                            <div class="checkouts__main">
+                                <div class="main__header">
+                                    <a href="./index.html" class="main__header-logo">
+                                        <h2>Kleino</h2>
+                                    </a>
+                                    <div class="breadcrumb checkouts__breadcrumb">
+                                        <div class="row no-gutters">
+                                            <div class="col l-12 m-12 c-12">
+                                                <ul class="breadcrumb__link">
+                                                    <li>
+                                                        <a href="./index.html">Giỏ hàng</a>
+                                                    </li>
+                                                    <li>
+                                                        <span>Thông tin giao hàng</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="main__content">
+                                    <div class="section">
+                                        <div class="section__title">
+                                            <h3>Thông tin giao hàng</h3>
+                                        </div>
+                                        <div class="content__text">
+                                            <span>Bạn đã có tài khoản?</span>
+                                            <a href="./login.html">Đăng nhập</a>
+                                        </div>
+                                        <div class="section__fieldset">
+                                            <div class="fieldset__input">
+                                                <input type="text" placeholder="Họ và tên" name="billing_name">
+                                            </div>
+                                            <div class="fieldset__input">
+                                                <input type="text" placeholder="Số điện thoại" name="billing_phone">
+                                            </div>
+                                            <div class="fieldset__input">
+                                                <input type="text" placeholder="Địa chỉ" name="billing_address">
+                                            </div>
+                                        </div>
+                                        <div class="section__shipping">
+                                            <div class="section__title">
+                                                <h3>Phương thức vận chuyển</h3>
+                                            </div>
+                                            <div class="section__content">
+                                                <div class="content__box">
+                                                    <div class="radio__wrapper">
+                                                        <label class="radio__label" for="shipping__rate">
+                                                            <div class="radio__input">
+                                                                <input id="shipping__rate" class="input-radio" type="radio" checked="">
+                                                                <span>Giao hàng tận nơi</span>
+                                                            </div>
+                                                            <span class="radio__price">0₫</span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+
+                                        <div class="section__payment">
+                                            <div class="section__title">
+                                                <h3>Phương thức thanh toán</h3>
+                                            </div>
+                                            <div class="section__content">
+                                                <div class="content__box">
+                                                    <div class="radio__wrapper">
+                                                        <label class="radio__label" for="payment-method-cod">
+                                                            <div class="radio__input">
+                                                                <input id="payment-method-cod" name="payment-method-cod" type="radio" value="1000693665" checked="">
+                                                                <span>Thanh toán khi giao hàng (COD)</span>
+                                                            </div>
+                                                        </label>
+                                                    </div>
+                                                    
+                                                    <div class="radio__wrapper radio__info hidden">
+                                                        <div class="blank__slate">
+                                                            - Khách hàng được kiểm tra hàng trước khi nhận hàng.
+                                                            <br />
+                                                            - Miễn phí ship với các đơn hàng trên 500.000 đ.
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    
+                                                    <div class="radio__wrapper">
+                                                        <label class="radio__label" for="payment-method-bank">
+                                                            <div class="radio__input">
+                                                                <input id="payment-method-bank" name="payment-method-bank" type="radio" value="1002134252">
+                                                                <span>Chuyển khoản qua ngân hàng</span>
+                                                            </div>
+                                                        </label>
+                                                    </div>
+                                                    
+                                                    <div class="radio__wrapper radio__info">
+                                                        <div class="blank__slate">
+                                                            Quý khách vui lòng thanh toán qua tài khoản công ty TNHH ICON AND DENIM số 4314767 ngân hàng ACB chi nhánh HCM
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="section__footer">
+                                            <a href="./cart.html" class="previous__link">
+                                                <svg class="previous__link-icon" xmlns="http://www.w3.org/2000/svg" width="6.7" height="11.3" viewBox="0 0 6.7 11.3"><path d="M6.7 1.1l-1-1.1-4.6 4.6-1.1 1.1 1.1 1 4.6 4.6 1-1-4.6-4.6z"></path></svg>
+                                                Giỏ hàng
+                                            </a>
+                                            <form id="form_next_step" accept-charset="UTF-8" method="post">
+                                                <input name="utf8" type="hidden" value="✓">
+                                                <button type="submit" class="btn__checkouts">
+                                                    <span class="btn-content">Hoàn tất đơn hàng</span>
+                                                </button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="main__footer">
+                                    Powered by Haravan
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col l-5 m-12 c-12">
+                            <div class="checkouts__sidebar">
+                                <div class="sidebar__content">
+                                    <div class="cart__view">
+                                        <table class="cart__list">
+                                            <tbody>
+                                                <tr class="item__1">
+                                                    <td class="img">
+                                                        <a href="/product__details.html">
+                                                            <img src="/assets/image/Product/1/1_ae35f5573a9c4d89aae7b313d9a7394d_master.jpg" alt="">
+                                                        </a>
+                                                    </td>
+                                                    <td class="info">
+                                                        <a class="title" href="/product__details.html">
+                                                            P Kleino Never Look Down
+                                                        </a>
+                                                        <span class="variant">S</span>
+                                                        <span class="quantity__view">1</span>
+                                                        <span class="price__view">650,000₫</span>
+                                                    </td>
+                                                </tr>
+                                                <tr class="item__1">
+                                                    <td class="img">
+                                                        <a href="/product__details.html">
+                                                            <img src="/assets/image/Product/1/1_ae35f5573a9c4d89aae7b313d9a7394d_master.jpg" alt="">
+                                                        </a>
+                                                    </td>
+                                                    <td class="info">
+                                                        <a class="title" href="/product__details.html">
+                                                            P Kleino Never Look Down
+                                                        </a>
+                                                        <span class="variant">S</span>
+                                                        <span class="quantity__view">1</span>
+                                                        <span class="price__view">650,000₫</span>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        <div class="line"></div>
+                                        
+                                        <div class="section__discount">
+                                            <form action="" method="POST" class="section__discount-form">
+                                                <input type="text" name="discount-code" placeholder="Mã giảm giá">
+                                                <button class="discount__btn" disabled>Sử dụng</button>
+                                            </form>
+                                        </div>
+                                        
+                                        <div class="line"></div>
+
+                                        <table class="checkouts__price">
+                                            <tbody>
+                                                <tr>
+                                                    <td class="text__left">
+                                                        Tạm tính
+                                                    </td>
+                                                    <td class="text__right">
+                                                        0₫
+                                                    </td>
+                                                </tr>
+                                                <td class="text__left">
+                                                    Phí vận chuyển
+                                                </td>
+                                                <td class="text__right">
+                                                    Miễn phí
+                                                </td>
+                                            </tbody>
+                                        </table>
+                                        <div class="line"></div>
+                                        <table>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="text__left">
+                                                        TỔNG TIỀN:
+                                                    </td>
+                                                    <td class="text__right">
+                                                        0₫
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous"></script>
+    <script src="/app.js"></script>
+    </script>
+</body>
+</html>
