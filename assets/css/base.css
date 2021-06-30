@@ -37,6 +37,10 @@ a:hover {
     color: #4d5757;
 }
 
+table {
+    border-collapse: collapse;
+}
+
 p {
     margin: 0;
 }

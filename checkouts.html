@@ -89,34 +89,33 @@
                                                 <div class="content__box">
                                                     <div class="radio__wrapper">
                                                         <label class="radio__label" for="payment-method-cod">
-                                                            <div class="radio__input">
+                                                            <div class="radio__input payment">
                                                                 <input id="payment-method-cod" name="payment-method-cod" type="radio" value="1000693665" checked="">
                                                                 <span>Thanh toán khi giao hàng (COD)</span>
                                                             </div>
                                                         </label>
-                                                    </div>
-                                                    
-                                                    <div class="radio__wrapper radio__info hidden">
-                                                        <div class="blank__slate">
-                                                            - Khách hàng được kiểm tra hàng trước khi nhận hàng.
-                                                            <br />
-                                                            - Miễn phí ship với các đơn hàng trên 500.000 đ.
+
+                                                        <div class="radio__info">
+                                                            <div class="blank__slate">
+                                                                - Khách hàng được kiểm tra hàng trước khi nhận hàng.
+                                                                <br />
+                                                                - Miễn phí ship với các đơn hàng trên 500.000 đ.
+                                                            </div>
                                                         </div>
                                                     </div>
                                                     
                                                     
                                                     <div class="radio__wrapper">
                                                         <label class="radio__label" for="payment-method-bank">
-                                                            <div class="radio__input">
+                                                            <div class="radio__input payment">
                                                                 <input id="payment-method-bank" name="payment-method-bank" type="radio" value="1002134252">
                                                                 <span>Chuyển khoản qua ngân hàng</span>
                                                             </div>
                                                         </label>
-                                                    </div>
-                                                    
-                                                    <div class="radio__wrapper radio__info">
-                                                        <div class="blank__slate">
-                                                            Quý khách vui lòng thanh toán qua tài khoản công ty TNHH ICON AND DENIM số 4314767 ngân hàng ACB chi nhánh HCM
+                                                        <div class="radio__info hidden">
+                                                            <div class="blank__slate">
+                                                                Quý khách vui lòng thanh toán qua tài khoản công ty TNHH ICON AND DENIM số 4314767 ngân hàng ACB chi nhánh HCM
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -141,7 +140,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col l-5 m-12 c-12">
+                        <div class="col l-5 m-0 c-0">
                             <div class="checkouts__sidebar">
                                 <div class="sidebar__content">
                                     <div class="cart__view">
@@ -232,7 +231,17 @@
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous"></script>
-    <script src="/app.js"></script>
+    <script>
+       $(".radio__input.payment input")
+        .on("click", function(e) {
+            $(this).prop("checked", false);
+            $(".radio__info").slideUp();
+            // console.log($(this).prop("checked"));
+            $(".radio__input.payment input:checked").prop("checked", false);
+            $(this).prop("checked", true);
+            $(this).closest(".radio__label")
+                .siblings('.radio__info').slideDown();
+        });
     </script>
 </body>
 </html>
