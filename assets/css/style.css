@@ -1609,21 +1609,20 @@
     padding: 0 15px;
     color: #252a2b;
     font-size: 14px;
-    font-weight: ;
+    font-weight: 500;
 }
 
-/* Page 404 */
-
-.page__error {
+/* Search Error */
+.search__error {
     padding: 50px 0;
 }
 
-.page__error .header {
+.search__error .header__page {
     margin-bottom: 10px;
     text-align: center;
 }
 
-.page__error .header::after {
+.search__error .header__page::after {
     content: "";
     background: #000;
     display: block;
@@ -1632,7 +1631,68 @@
     margin: 30px auto 0;
 }
 
-.page__error .header .title {
+.search__error .header__page .title {
+    margin: 0;
+}
+
+.search__error .subtext {
+    font-size: 16px;
+    color: #252a2b;
+}
+
+.search__error .search__field {
+    padding: 0 300px;
+}
+
+.search__error .search__page {
+    position: relative;
+    width: 100%;
+    height: 55px;
+    margin-top: 40px;
+}
+
+.search__error .search__page .icon__search {
+    width: 25px;
+    height: 25px;
+    fill: #d9d9d9;
+    cursor: pointer;
+}
+
+.search__error .search__page input {
+    width: 100%;
+    height: 100%;
+    font-size: 15px;
+    font-weight: 500;
+    margin: 0;
+    color: #252a2b;
+    padding: 0 55px 0 20px;
+    border: none;
+    background-color: #f5f5f5;
+    outline: none;
+    transition: all 150ms linear;
+}
+
+/* Page 404 */
+
+.page__error {
+    padding: 50px 0;
+}
+
+.page__error .header__page {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.page__error .header__page::after {
+    content: "";
+    background: #000;
+    display: block;
+    width: 60px;
+    height: 4px;
+    margin: 30px auto 0;
+}
+
+.page__error .header__page .title {
     margin: 0;
 }
 
@@ -1641,7 +1701,7 @@
     color: #252a2b;
 }
 
-.page__error .header a {
+.page__error .header__page a {
     color: #252a2b;
     font-weight: 500;
 }

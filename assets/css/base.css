@@ -137,6 +137,10 @@ ul {
     transition: opacity 150ms linear;
 }
 
+.btn__search.dark {
+    background-color: #252a2b;
+}
+
 .btn__close {
     position: absolute;
     top: 55px;

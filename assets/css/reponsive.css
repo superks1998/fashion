@@ -114,6 +114,10 @@
     .header__mobile {
         padding: 0 8px;
     }
+
+    .search__error .search__field {
+        padding: 0 150px;
+    }
 }
 
 /* Mobile */
@@ -210,6 +214,10 @@
 
     .cart__order {
         margin-top: 30px;
+    }
+
+    .search__error .search__field {
+        padding: 0 50px;
     }
 
     .footer__main {
