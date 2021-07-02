@@ -14,6 +14,10 @@
     .product__description {
         margin-top: 30px;
     }
+
+    .checkouts__success {
+        margin-left: 70px;
+    }
 }
 
 /* Mobile & Tablet */
@@ -93,11 +97,36 @@
     }
 
     .checkouts {
-        padding: 0 15px;
+        padding: 0;
     }
 
     .checkouts__main {
-        padding: 0;
+        padding: 0 15px;
+        float: none;
+        width: 100%;
+    }
+
+    .checkouts__sidebar {
+        display: none;
+        float: none;
+        width: 100%;
+        padding: 0 50px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    }
+
+    .checkouts__sidebar::after {
+        height: unset;
+    }
+
+    .checkouts__success {
+        margin-left: 70px;
+    }
+
+    .news__posts .post .post__thumbnail {
+        display: block;
+        width: 100%;
+        height: 300px;
+        overflow: hidden;
     }
 }
 
@@ -218,6 +247,10 @@
 
     .search__error .search__field {
         padding: 0 50px;
+    }
+
+    .news {
+        padding: 20px;
     }
 
     .footer__main {
