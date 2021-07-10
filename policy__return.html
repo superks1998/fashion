@@ -28,7 +28,7 @@
                         <div class="col l-4 m-0 c-0"></div>
                         <div class="col l-4 m-4 c-4">
                             <div class="header__logo">
-                                <a href="/">Kleino</a>
+                                <a href="./">Kleino</a>
                             </div>
                         </div>
                         <div class="col l-4 m-8 c-8">
@@ -77,17 +77,17 @@
                     <div class="row">
                         <div class="col l-2">
                             <div class="header__menu-logo">
-                                <a href="/">Kleino</a>
+                                <a href="./">Kleino</a>
                             </div>
                         </div>
                         <div class="col l-8 m-0 c-0">
                             <nav class="header__navbar">
                                 <ul class="header__navbar-list">
                                     <li class="header__navbar-item">
-                                        <a href="/index.html">Trang chủ</a>
+                                        <a href="./index.html">Trang chủ</a>
                                     </li>
-                                    <li class="header__navbar-item active">
-                                        <a href="/collection.html">
+                                    <li class="header__navbar-item">
+                                        <a href="./collection.html">
                                             Sản phẩm
                                             <i class="fas fa-angle-down"></i>
                                         </a>
@@ -152,16 +152,16 @@
                                         </ul>
                                     </li>
                                     <li class="header__navbar-item">
-                                        <a href="/collection__sale.html">SALE</a>
+                                        <a href="./collection__sale.html">SALE</a>
                                     </li>
                                     <li class="header__navbar-item">
-                                        <a href="">Tin tức</a>
+                                        <a href="./news.html">Tin tức</a>
+                                    </li>
+                                    <li class="header__navbar-item active">
+                                        <a href="./policy__return.html">Chính sách</a>
                                     </li>
                                     <li class="header__navbar-item">
-                                        <a href="">Giới thiệu</a>
-                                    </li>
-                                    <li class="header__navbar-item">
-                                        <a href="">Liên hệ</a>
+                                        <a href="./about__us.html">Giới thiệu</a>
                                     </li>
                                 </ul>
                             </nav>
@@ -223,61 +223,94 @@
         <div class="app__container">
             <div class="grid">
                 <div class="container">
-                    <div class="account">
-                        <div class="row">
+                    <div class="breadcrumb">
+                        <div class="row no-gutters">
                             <div class="col l-12 m-12 c-12">
-                                <div class="account__title">
-                                    <h1>
-                                        Tài khoản của bạn
-                                    </h1>
-                                </div>
+                                <ul class="breadcrumb__link">
+                                    <li>
+                                        <a href="./index.html">Trang chủ</a>
+                                    </li>
+                                    <li>
+                                        <span>Tin tức</span>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
-                        <div class="account__content">
-                            <div class="row">
-                                <div class="col l-3 m-4 c-12">
-                                    <div class="account__sidebar">
-                                        <div class="account__sidebar-title">
-                                            <h3>Tài khoản</h3>
+                    </div>
+
+                    <div class="about__us">
+                        <div class="row">
+                            <div class="col l-3 m-12 c-12">
+                                <div class="about__sidebar">
+                                    <div class="group__menu">
+                                        <div class="group__menu-title">
+                                            <h5>Danh mục trang</h5>
                                         </div>
-                                        <ul class="account__sidebar-list">
-                                            <li>
-                                                <a href="./account.html">
-                                                    Thông tin tài khoản
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="">
-                                                    Danh sách địa chỉ
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="">
-                                                    Đăng xuất
-                                                </a>
-                                            </li>
-                                        </ul>
+                                        <div class="group__menu-category">
+                                            <ul class="tree__menu">
+                                                <li><a href="./search.html">Tìm kiếm</a></li>
+                                                <li><a href="./about__us.html">Giới thiệu</a></li>
+                                                <li><a href="./policy__return.html">Chính sách đổi trả</a></li>
+                                                <li><a href="./policy__privacy.html">Chính sách bảo mật</a></li>
+                                                <li><a href="./terms__service.html">Điều khoản dịch vụ</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="about__us-banner hide-on-tablet-mobile">
+                                        <a href="/">
+                                            <img src="./assets/image/about_banner.jpg" alt="Banner">
+                                        </a>
                                     </div>
                                 </div>
-                                <div class="col l-9 m-8 c-12">
-                                    <div class="account__info"> 
-                                        <div class="title">
-                                            <h4>Thông tin tài khoản</h4>
-                                        </div>
-                                        <div class="account__name">
-                                            <p>Trịnh Đạt</p>
-                                        </div>
-                                        <div class="account__email">
-                                            <p>superks1998@gmail.com</p>
-                                        </div>
-                                        <div class="account__address-link">
-                                            <a href="">Xem địa chỉ</a>
-                                        </div>
+                            </div>
+                            <div class="col l-9 m-12 c-12">
+                                <div class="about__main">
+                                    <div class="about__main-heading">
+                                        <h3>Chính sách đổi trả</h3>
                                     </div>
-                                    <div class="account__order">
-                                        <div class="table">
-                                            <p>Bạn chưa đặt mua sản phẩm nào</p>
-                                        </div>
+                                    <div class="about__main-content">
+                                        <p>
+                                            <strong>1. Điều kiện đổi trả</strong>
+                                        </p>
+                                        <p>
+                                            Quý Khách hàng cần kiểm tra tình trạng hàng hóa và có thể đổi hàng/ trả lại hàng ngay tại thời điểm giao/nhận hàng trong những trường hợp sau:
+                                        </p>
+                                        <ul>
+                                            <li>
+                                                <p>Hàng không đúng chủng loại, mẫu mã trong đơn hàng đã đặt hoặc như trên website tại thời điểm đặt hàng.</p>
+                                            </li>
+                                            <li>
+                                                <p>Không đủ số lượng, không đủ bộ như trong đơn hàng.</p>
+                                            </li>
+                                            <li>
+                                                <p>Tình trạng bên ngoài bị ảnh hưởng như rách bao bì, bong tróc, bể vỡ…</p>
+                                            </li>
+                                        </ul>
+                                        <p>Khách hàng có trách nhiệm trình giấy tờ liên quan chứng minh sự thiếu sót trên để hoàn thành việc hoàn trả/đổi trả hàng hóa. </p>
+                                        <p>
+                                            <strong>2. Quy định về thời gian thông báo và gửi sản phẩm đổi trả</strong>
+                                        </p>
+                                        <ul>
+                                            <li>
+                                                <p>
+                                                    <strong>Thời gian thông báo đổi trả:</strong>
+                                                    trong vòng 48h kể từ khi nhận sản phẩm đối với trường hợp sản phẩm thiếu phụ kiện, quà tặng hoặc bể vỡ.
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p>
+                                                    <strong>Thời gian gửi chuyển trả sản phẩm:</strong>
+                                                    trong vòng 14 ngày kể từ khi nhận sản phẩm.
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <p>
+                                                    <strong>Địa điểm đổi trả sản phẩm:</strong>
+                                                    Khách hàng có thể mang hàng trực tiếp đến văn phòng/ cửa hàng của chúng tôi hoặc chuyển qua đường bưu điện.
+                                                </p>
+                                            </li>
+                                        </ul>
+                                        <p>Trong trường hợp Quý Khách hàng có ý kiến đóng góp/khiếu nại liên quan đến chất lượng sản phẩm, Quý Khách hàng vui lòng liên hệ đường dây chăm sóc khách hàng của chúng tôi.</p>
                                     </div>
                                 </div>
                             </div>
@@ -304,7 +337,7 @@
                                         <form action="">
                                             <div class="newsletter__input">
                                                 <input type="text" placeholder="Nhập email của bạn">
-                                                <a href="" class="button dark">
+                                                <a href="#" class="button dark">
                                                     Đăng kí
                                                 </a>
                                             </div>
@@ -337,7 +370,7 @@
                                 </p>
 
                                 <div class="footer__authentication">
-                                    <img sr.c="//theme.hstatic.net/1000392325/1000500226/14/logo-bct.png?v=60" alt="Bộ Công Thương">
+                                    <img src="./assets/image/logo-bct.png" alt="Bộ Công Thương">
                                 </div>
                             </div>
                         </div>
@@ -349,11 +382,11 @@
                             </div>
                             <div class="footer__content">
                                 <ul class="footer__link">
-                                    <li><a href="">Tìm kiếm</a></li>
-                                    <li><a href="">Giới thiệu</a></li>
-                                    <li><a href="">Chính sách đổi trả</a></li>
-                                    <li><a href="">Chính sách bảo mật</a></li>
-                                    <li><a href="">Điều khoản dịch vụ</a></li>
+                                    <li><a href="./search.html">Tìm kiếm</a></li>
+                                    <li><a href="./about__us.html">Giới thiệu</a></li>
+                                    <li><a href="./policy__return.html">Chính sách đổi trả</a></li>
+                                    <li><a href="./policy__privacy.html">Chính sách bảo mật</a></li>
+                                    <li><a href="./terms__service.html">Điều khoản dịch vụ</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -406,7 +439,7 @@
                                         var js, fjs = d.getElementsByTagName(s)[0];
                                         if (d.getElementById(id)) return;
                                         js = d.createElement(s); js.id = id;
-                                        js.src = "//connect.facebook.net/en_US/sdk/xfbml.customerchat.js#xfbml=1&appId=263266547210244&version=v2.0";
+                                        js.src = ".//connect.facebook.net/en_US/sdk/xfbml.customerchat.js#xfbml=1&appId=263266547210244&version=v2.0";
                                         fjs.parentNode.insertBefore(js, fjs);
                                     }(document, 'script', 'facebook-jssdk'));
                                 </script>
@@ -446,10 +479,25 @@
                 </form>
                 <div class="result__content">
                     <p class="result__empty">Không có sản phẩm nào ...</p>
-                    <div class="result__item result__item-firstchild">
+                    <div class="result__item">
                         <div class="result__item-details">
                             <div class="details__name">
-                                <a href="./product__details.html">P Kleino Never Look Down</a>
+                                <a href="">P Kleino Never Look Down</a>
+                            </div>
+                            <div class="details__price">
+                                <p>650.000₫</p>
+                            </div>
+                        </div>
+                        <div class="result__item-img">
+                            <a href="">
+                                <img src="./assets/image/Product/1/1_ae35f5573a9c4d89aae7b313d9a7394d_master.jpg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="result__item">
+                        <div class="result__item-details">
+                            <div class="details__name">
+                                <a href="">P Kleino Never Look Down</a>
                             </div>
                             <div class="details__price">
                                 <p>650.000₫</p>
@@ -464,7 +512,7 @@
                     <div class="result__item">
                         <div class="result__item-details">
                             <div class="details__name">
-                                <a href="./product__details.html">P Kleino Never Look Down</a>
+                                <a href="">P Kleino Never Look Down</a>
                             </div>
                             <div class="details__price">
                                 <p>650.000₫</p>
@@ -479,22 +527,7 @@
                     <div class="result__item">
                         <div class="result__item-details">
                             <div class="details__name">
-                                <a href="./product__details.html">P Kleino Never Look Down</a>
-                            </div>
-                            <div class="details__price">
-                                <p>650.000₫</p>
-                            </div>
-                        </div>
-                        <div class="result__item-img">
-                            <a href="./product__details.html">
-                                <img src="./assets/image/Product/1/1_ae35f5573a9c4d89aae7b313d9a7394d_master.jpg" alt="">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="result__item">
-                        <div class="result__item-details">
-                            <div class="details__name">
-                                <a href="./product__details.html">P Kleino Never Look Down</a>
+                                <a href="">P Kleino Never Look Down</a>
                             </div>
                             <div class="details__price">
                                 <p>650.000₫</p>
@@ -520,19 +553,19 @@
                         <tbody>
                             <tr class="item__1">
                                 <td class="img">
-                                    <a href="./product__details.html">
-                                        <img src="./assets/image/Product/1/1_ae35f5573a9c4d89aae7b313d9a7394d_master.jpg" alt="">
+                                    <a href="/product__details.html">
+                                        <img src="/assets/image/Product/1/1_ae35f5573a9c4d89aae7b313d9a7394d_master.jpg" alt="">
                                     </a>
                                 </td>
                                 <td class="info">
-                                    <a class="title" href="./product__details.html">
+                                    <a class="title" href="/product__details.html">
                                         P Kleino Never Look Down
                                     </a>
                                     <span class="variant">S</span>
                                     <span class="quantity__view">1</span>
                                     <span class="price__view">650,000₫</span>
                                     <span class="remove__cart">
-                                        <a href="#">
+                                        <a href="">
                                             <i class="fa fa-times"></i>
                                         </a>
                                     </span>
@@ -540,19 +573,19 @@
                             </tr>
                             <tr class="item__1">
                                 <td class="img">
-                                    <a href="./product__details.html">
-                                        <img src="./assets/image/Product/1/1_ae35f5573a9c4d89aae7b313d9a7394d_master.jpg" alt="">
+                                    <a href="/product__details.html">
+                                        <img src="/assets/image/Product/1/1_ae35f5573a9c4d89aae7b313d9a7394d_master.jpg" alt="">
                                     </a>
                                 </td>
                                 <td class="info">
-                                    <a class="title" href="./product__details.html">
+                                    <a class="title" href="/product__details.html">
                                         P Kleino Never Look Down
                                     </a>
                                     <span class="variant">S</span>
                                     <span class="quantity__view">1</span>
                                     <span class="price__view">650,000₫</span>
                                     <span class="remove__cart">
-                                        <a href="#">
+                                        <a href="">
                                             <i class="fa fa-times"></i>
                                         </a>
                                     </span>
@@ -573,10 +606,10 @@
                             </tr>
                             <tr>
                                 <td>
-                                    <a href="./cart.html" class="link__cart button dark">Xem giỏ hàng</a>
+                                    <a href="" class="link__cart button dark">Xem giỏ hàng</a>
                                 </td>
                                 <td>
-                                    <a href="./checkouts.html" class="link__checkout button dark">Thanh toán</a>
+                                    <a href="" class="link__checkout button dark">Thanh toán</a>
                                 </td>
                             </tr>
                         </tbody>
@@ -726,12 +759,7 @@
     <div class="site__overlay"></div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous"></script>
-    <script src="/owlcarousel/owl.carousel.min.js"></script>
-    <script src="/app.js"></script>
-    <script>
-        $('.collection__heading-sort').on('click', function() {
-            $(this).toggleClass('active');
-        })
-    </script>
+    <script src="./owlcarousel/owl.carousel.min.js"></script>
+    <script src="./app.js"></script>
 </body>
 </html>
