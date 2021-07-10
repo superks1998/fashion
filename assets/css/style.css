@@ -764,14 +764,42 @@
     background-color: #f7f7f7;
 }
 
-.account__order .table {
+.account__order .order__null {
+    font-size: 14px;
+    color: #252a2b;
+}
+
+.account__order .order__table {
     background-color: #fff;
     padding: 10px;
 }
 
-.account__order .table p {
+.account__order .order__table table {
+    width: 100%;
+    background: var(--white-color);
+}
+
+.account__order .order__table .order__table-title {
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    position: relative;
+    border-bottom: 1px solid #ededed;
+    padding-bottom: 8px;
+}
+
+.account__order .order__table thead th {
+    padding: 8px;
+    line-height: 1.5;
+    vertical-align: bottom;
+    border-bottom: 2px solid #ddd;
+}
+
+.account__order .order__table tbody td {
     font-size: 14px;
-    color: #252a2b;
+    vertical-align: middle;
+    padding: 8px;
 }
 
 /* Collection HTML */

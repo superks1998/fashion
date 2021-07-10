@@ -55,6 +55,10 @@ ul {
     padding: 0;
 }
 
+.hide-all {
+    display: none;
+}
+
 /* input {
     color: inherit;
     font: inherit;
